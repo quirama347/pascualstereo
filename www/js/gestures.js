@@ -1,8 +1,8 @@
 var emisora = document.getElementById('emisora');
-var emisoras = ["http://20833.live.streamtheworld.com/EL_SOL_MED_SC?DIST=TuneIn&amp;TGT=TuneIn&amp;maxServers=2&amp;ua=RadioTime&amp;ttag=RadioTime",
-                "http://18223.live.streamtheworld.com/LOS40_COLUMBIA_SC?DIST=TuneIn&amp;TGT=TuneIn&amp;maxServers=2&amp;ua=RadioTime&amp;ttag=RadioTime",
-                "http://20833.live.streamtheworld.com/RADIO_ACTIVA_SC?DIST=TuneIn&amp;TGT=TuneIn&amp;maxServers=2&amp;ua=RadioTime&amp;ttag=RadioTime"];
-
+var emisoras = ["http://65.60.45.74:8070/;",
+                "http://20833.live.streamtheworld.com/EL_SOL_MED_SC?DIST=TuneIn&amp;TGT=TuneIn&amp;maxServers=2&amp;ua=RadioTime&amp;ttag=RadioTime",
+                "http://20833.live.streamtheworld.com/RADIO_ACTIVA_SC?DIST=TuneIn&amp;TGT=TuneIn&amp;maxServers=2&amp;ua=RadioTime&amp;ttag=RadioTime",
+                "http://18223.live.streamtheworld.com/LOS40_COLUMBIA_SC?DIST=TuneIn&amp;TGT=TuneIn&amp;maxServers=2&amp;ua=RadioTime&amp;ttag=RadioTime",];
 
 var app = {
     // primera función que se ejecutar al cargar la pagina
