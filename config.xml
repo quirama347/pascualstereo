@@ -2,10 +2,10 @@
 <widget id="co.edu.pascualbravo.emisora" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
     <name>Electronica Stereo</name>
     <description>
-         App Jhonatan Quirama Pino
+         App Jhonatan Quirama y Andres Felipe
     </description>
     <author email="quiramapino347@gmail.com" href="http://www.pascualbravo.edu.co">
-        Jhonatan Quirama Pino
+        Jhonatan Quirama y Andres Felipe
     </author>
    <content src="index.html" />
  <preference name="DisallowOverscroll" value="true" />
