@@ -9,15 +9,37 @@
     <link href="./css/css.css" type="text/css " rel="stylesheet" />
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" crossorigin="anonymous" />
     <link href="./css/estilos.css" type="text/css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
 </head>
 
 <body>
     <div class="container">
-        <div class="py-5 text-center">
-            <img class="d-block mx-auto mb-4" src="img/1.jpg" alt="" width="50%" height="auto">
-            <h2>Emisora Stereo</h2>
-            <p class="lead">Esta pagina es una emisora de Electronica
-            </p>
+        <div class="py-3 text-center">
+            <img class="d-block mx-auto mb-4" src="img/1.jpg" alt="" width="40%" height="auto">
+            <svg viewbox="0 0 100 20">
+                <defs>
+                    <linearGradient id="gradient" x1="0" x2="0" y1="0" y2="1">
+                        <stop offset="5%" stop-color="#326384" />
+                        <stop offset="95%" stop-color="#123752" />
+                    </linearGradient>
+                    <pattern id="wave" x="0" y="0" width="120" height="20" patternUnits="userSpaceOnUse">
+                        <path id="wavePath" d="M-40 9 Q-30 7 -20 9 T0 9 T20 9 T40 9 T60 9 T80 9 T100 9 T120 9 V20 H-40z"
+                            mask="url(#mask)" fill="url(#gradient)">
+                            <animateTransform attributeName="transform" begin="0s" dur="1.5s" type="translate"
+                                from="0,0" to="40,0" repeatCount="indefinite" />
+                        </path>
+                    </pattern>
+                </defs>
+                <text text-anchor="middle" x="50" y="15" font-size="10" fill="url(#wave)" fill-opacity="0.6">LA X
+                    ELECTRONICA </text>
+                <text text-anchor="middle" x="50" y="15" font-size="10" fill="url(#gradient)" fill-opacity="0.1">LA X
+                    ELECTRONICA</text>
+            </svg>
+            <p class="primera">La X 103.9 Medellín es la primera y única estación Dance Electrónica de Colombia.
+                Promovemos las tendencias más importantes de la música internacional en una variada
+                programación.</P>
+
         </div>
         <div class="row text-center">
             <div class="col">
@@ -49,20 +71,56 @@
                 </div>
             </div>
         </div>
-        <div class="py-2 text-center">
-            <img class="d-block mx auto mb-4" src="./img/3.gif" alt="" width="50%" height="auto" />
+        </br>
+        <div class="row text-center">
+            <div class="col">
+                <select class="form-control form-control-lg" id="seleccion">
+                    <option value="0">El sol</option>
+                    <option value="1">RadioActiva Planeta Rock</option>
+                    <option value="2">Los 40</option>
+                </select>
+            </div>
+        </div>
+        </br>
+
+        <div class="row text-center">
+            <div class="col">
+                <div class="py-1 text-center">
+                    <div align=center><img class="d-block mx auto mb-4" src="./img/2.gif" alt="" width="30%"
+                            height="auto" />
+                    </div>
+                </div>
+            </div>
         </div>
         <div class="footer">
             <p>Pascual Bravo
                 &copy; 2019
             </p>
         </div>
-        <!---Reproductor de-- audio--------->
-        <audio id="emisora">
-            <!-- aqui URL de la radio que deseemos-->
-            <source src="http://65.60.45.74:8070/;" type="audio/mpeg" />
-            Tu navegador no es compatible con tu navegador
-        </audio>
+    </div>
+    <!---Reproductor de-- audio--------->
+    <audio id="emisora">
+        <!-- aqui URL de la radio que deseemos-->
+        <source src="http://65.60.45.74:8070/;" type="audio/mpeg" />
+        Tu navegador no es compatible con tu navegador
+    </audio>
+    </br>
+    </br>
+    <div class="icon-bar">
+        <div class="evento">
+            <p><a href="javascript:mostrar();">Mostrar</a></p>
+            <div id="flotante" style="display:none;">
+                <a href="https://www.facebook.com/lax1039medellin/" class="facebook"><i class="fa fa-facebook"></i></a>
+                <a href="https://twitter.com/lax1039medellin" class="twitter"><i class="fa fa-twitter"></i></a>
+                <a href="https://laxmedellin.com/" class="google"><i class="fa fa-google"></i></a>
+                <a href="https://www.youtube.com/user/laxmasmusica" class="youtube"><i class="fa fa-youtube"></i></a>
+                <a href="http://soundcloud.com/lax1039medellin/" class="soundcloud"><i
+                        class="fab fa-soundcloud"></i></a>
+                <a href="https://www.mixcloud.com/laxelectronica/" class="mixcloud"><i class="fab fa-mixcloud"></i></a>
+                <div id="close"><a href="javascript:cerrar();">Cerrar</a>
+                </div>
+            </div>
+        </div>
     </div>
     <!---llamado de javscripts-->
     <script type="text/javascript" src="./js/jquery-3.2.1.slim.min.js"></script>
@@ -71,7 +129,22 @@
     <script type="text/javascript" src="./js/fastclick.js"></script>
     <script type="text/javascript" src="./js/gestures.js"></script>
     <script type="text/javascript" src="cordova.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+    <script src="main.js"></script>
+    <script type="text/javascript"></script>
 
+    <script language="javascript">
+        function mostrar() {
+            div = document.getElementById('flotante');
+            div.style.display = 'block';
+        }
+
+        function cerrar() {
+            div = document.getElementById('flotante');
+            div.style.display = 'none';
+        }
+    </script>
+    
 </body>
 
 </html>

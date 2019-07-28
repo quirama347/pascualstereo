@@ -1,4 +1,8 @@
 var emisora = document.getElementById('emisora');
+var emisoras = ["http://20833.live.streamtheworld.com/EL_SOL_MED_SC?DIST=TuneIn&amp;TGT=TuneIn&amp;maxServers=2&amp;ua=RadioTime&amp;ttag=RadioTime",
+                "http://18223.live.streamtheworld.com/LOS40_COLUMBIA_SC?DIST=TuneIn&amp;TGT=TuneIn&amp;maxServers=2&amp;ua=RadioTime&amp;ttag=RadioTime",
+                "http://20833.live.streamtheworld.com/RADIO_ACTIVA_SC?DIST=TuneIn&amp;TGT=TuneIn&amp;maxServers=2&amp;ua=RadioTime&amp;ttag=RadioTime"];
+
 
 var app = {
     // primera función que se ejecutar al cargar la pagina
@@ -18,12 +22,13 @@ var app = {
         //var botonVolMas = document.querySelector('#volumemas');
         //var botonVolMenos = document.querySelector('#volumemenos');
         var slider = document.querySelector("#myRange");
-
-        botonPlay.addEventListener('click', app.play, false);
+   var selecc = document.querySelector('#seleccion');
+       botonPlay.addEventListener('click', app.play, false);
         botonPause.addEventListener('click', app.pausa, false);
         //botonVolMas.addEventListener('click', app.subeVol, false);
        // botonVolMenos.addEventListener('click', app.bajaVol, false);
         slider.addEventListener('input', app.deslizar, false);
+        selecc.addEventListener('change', app.sintonizarEmisora, false);
     },
     
     
@@ -50,11 +55,17 @@ var app = {
         console.log("clic en baja volume");
         document.getElementById('emisora').volume -= 0.1;
     }*/
+    sintonizarEmisora: function () {
+        app.pausa();
+        emisora.src = emisoras[this.value];
+},
     deslizar: function(){
+
         // console.log(this.value/100)
         document.getElementById('emisora').volume = this.value/100;
     }
 };
+
 
 // inicializar al cargar la pagina
 if ('addEventListener' in document) {
